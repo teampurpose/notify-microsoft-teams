@@ -27,6 +27,7 @@ async function run() {
 
 		let title = core.getInput('title');
 		let msteams_emails= core.getInput('msteams_emails');
+		let repository_link= core.getInput('repository_link');
 		let raw = core.getInput('raw');
 		let dry_run = core.getInput('dry_run');
 
@@ -50,7 +51,8 @@ async function run() {
 					steps,
 					needs,
 					title,
-					msteams_emails
+					msteams_emails,
+					repository_link
 				}
 			);
 		} else {
