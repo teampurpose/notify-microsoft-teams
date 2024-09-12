@@ -187,7 +187,8 @@ class MSTeams {
                           steps = {},
                           needs = {},
                           title = '',
-                          msteams_emails = ''
+                          msteams_emails = '',
+                          repositoryLink = ''
                         }) {
     const steps_summary = summary_generator(steps, 'outcome');
     const needs_summary = summary_generator(needs, 'result');
@@ -223,7 +224,7 @@ class MSTeams {
       type: 'TextBlock',
       size: 'Medium',
       weight: 'lighter',
-      text: repository_link
+      text: repositoryLink !== '' ? repositoryLink : repository_link
     };
 
     const actionLinks = {
@@ -251,18 +252,24 @@ class MSTeams {
         content: {
           type: 'AdaptiveCard',
           body: [
-            headerTitle,
-            repositoryLink,
-            ...commitChangeLog,
-            ...steps_summary,
-            ...needs_summary,
-            ...status_summary,
-            actionLinks,
-            ...mentionedIds
+            {
+              type: 'Container',
+              items: [
+                headerTitle,
+                repositoryLink,
+                ...commitChangeLog,
+                ...steps_summary,
+                ...needs_summary,
+                ...status_summary,
+                actionLinks,
+                ...mentionedIds
+              ]
+            }
           ],
           '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json',
           version: '1.5',
           msteams: {
+            width: 'Full',
             entities: entities
           }
         }
