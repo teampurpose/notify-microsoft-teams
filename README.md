@@ -39,6 +39,7 @@ You can customize the following parameters:
 |      raw       |optional|''| JSON object to send to Microsoft Teams                                                                   |
 |     title      |optional|''| Overwrite default title                                                                                  |
 | msteams_emails |optional|''| Microsoft teams email ids in CSV to tag in the message                                                   |
+| repository_link|optional|''| Link to show. Use Markdown to create the link                                                        |
 
 Please refer [action.yml](./action.yml) for more details.
 
