@@ -27,7 +27,7 @@ async function run() {
 
 		let title = core.getInput('title');
 		let msteams_emails= core.getInput('msteams_emails');
-		let repository_link= core.getInput('repository_link');
+		let repo_link= core.getInput('repository_link');
 		let raw = core.getInput('raw');
 		let dry_run = core.getInput('dry_run');
 
@@ -40,7 +40,7 @@ async function run() {
 			title,
 			msteams_emails,
 			dry_run,
-			repository_link
+			repo_link
 		})}`);
 
 		const msteams = new MSTeams();
@@ -53,7 +53,7 @@ async function run() {
 					needs,
 					title,
 					msteams_emails,
-					repository_link
+					repo_link
 				}
 			);
 		} else {
