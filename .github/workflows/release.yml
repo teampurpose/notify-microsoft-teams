@@ -25,7 +25,7 @@ jobs:
         run: npx semantic-release@19.0.5
 
       - name: MSTeams Notification
-        uses: skitionek/notify-microsoft-teams@master
+        uses: teampurpose/notify-microsoft-teams@master
         if: always()
         with:
           webhook_url: ${{ secrets.MSTEAMS_WEBHOOK }}
