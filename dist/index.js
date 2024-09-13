@@ -25775,7 +25775,8 @@ async function run() {
 			raw,
 			title,
 			msteams_emails,
-			dry_run
+			dry_run,
+			repository_link
 		})}`);
 
 		const msteams = new MSTeams();
