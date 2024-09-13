@@ -1,6 +1,6 @@
 name: 'notify-microsoft-teams'
 description: 'Microsoft Teams Notification for Github Actions'
-author: 'Skitionek'
+author: 'teampurpose'
 inputs:
   webhook_url:
     description: 'teams incoming webhook url'
