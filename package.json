@@ -1,5 +1,5 @@
 {
-  "name": "@skitionek/notify-microsoft-teams",
+  "name": "teampurpose/notify-microsoft-teams",
   "version": "v1.0.0",
   "description": "Microsoft Teams Notification for Github Actions",
   "main": "dist/index.js",
@@ -30,9 +30,9 @@
   "author": "GitHub",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Skitionek/notify-microsoft-teams/issues"
+    "url": "https://github.com/teampurpose/notify-microsoft-teams/issues"
   },
-  "homepage": "https://github.com/Skitionek/notify-microsoft-teams#readme",
+  "homepage": "https://github.com/teampurpose/notify-microsoft-teams#readme",
   "dependencies": {
     "@actions/core": "^1.9.1",
     "@octokit/rest": "^17.11.2",
