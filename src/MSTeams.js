@@ -188,7 +188,7 @@ class MSTeams {
                           needs = {},
                           title = '',
                           msteams_emails = '',
-                          repositoryLink = ''
+                          repo_link = ''
                         }) {
     const steps_summary = summary_generator(steps, 'outcome');
     const needs_summary = summary_generator(needs, 'result');
@@ -224,7 +224,7 @@ class MSTeams {
       type: 'TextBlock',
       size: 'Medium',
       weight: 'lighter',
-      text: repositoryLink !== '' ? repositoryLink : repository_link
+      text: repo_link !== '' ? repo_link : repository_link
     };
 
     const actionLinks = {
